@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NovaCore Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f0f8ff;
+      color: #222;
+    }
+
+    .top-bar {
+      background: linear-gradient(90deg, #00bcd4, #3f51b5);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    .navbar a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .navbar a:hover {
+      color: #b2ebf2;
+    }
+ .hero {
+  background: url('https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .hero-buttons button {
+      padding: 12px 25px;
+      margin: 10px;
+      font-size: 1em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background-color: #00bcd4;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #0097a7;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #00bcd4;
+      border: 2px solid #00bcd4;
+    }
+
+    .btn-secondary:hover {
+      background-color: #00bcd4;
+      color: white;
+    }
+
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      background: #e3f2fd;
+      padding: 40px 20px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 10px;
+      padding: 25px;
+      width: 240px;
+      margin: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: scale(1.05);
+    }
+
+    .feature img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: linear-gradient(135deg, #3f51b5, #8b189f);
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.1em;
+    }
+
+    .services {
+      padding: 60px 20px;
+      text-align: center;
+      background: #e1f5fe;
+    }
+
+    .services h2 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .service-boxes {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .service-box {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      width: 240px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .service-box:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      text-align: center;
+      background: #7b1fa2;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .contact h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .contact p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .contact a button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background: white;
+      color: #7b1fa2;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .contact a button:hover {
+      background: #4a0072;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo">NovaCore</div>
+    <nav class="navbar">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+ <section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Welcome to NovaCore Digital</h1>
+    <p>Empowering Businesses with Smart Technology, Creative Strategy, and Digital Brilliance.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView()">Explore Services</button>
+      <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView()">Contact Us</button>
+    </div>
+  </div>
+</section>
+
+  <section class="features">
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/light-on.png" alt="Smart Solutions" />
+      Smart Digital Strategies
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/trophy.png" alt="12 Years" />
+      12 Years of Excellence
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/fluency/48/group-foreground-selected.png" alt="Team Work" />
+      Dedicated Expert Team
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About NovaCore</h2>
+    <p>NovaCore Digital builds performance-driven platforms for global brands. From conceptualization to execution, we bring creativity and precision to every line of code and every user journey.</p>
+  </section>
+
+  <section class="services" id="services">
+    <h2>Our Services</h2>
+    <div class="service-boxes">
+      <div class="service-box">AI-Powered Automation</div>
+      <div class="service-box">UI/UX & Product Design</div>
+      <div class="service-box">Full Stack Development</div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Call Us Today</h2>
+    <p>Let's turn your idea into the next digital success story.</p>
+    <a href="tel:+18005554321">
+      <button>Call Now: +1-800-555-4321</button>
+    </a>
+  </section>
+</body>
+</html>
